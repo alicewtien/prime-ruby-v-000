@@ -1,8 +1,9 @@
 def prime?(number)
-  if number == 2
+  if number <= 1
+    false
+  elsif number == 2
     true
-  elsif number > 1 && (2..number-1).none? { |x| number % x == 0 }
-    true
+  else (2..number-1).none? { |x| number % x == 0 }
   end
 end
 
